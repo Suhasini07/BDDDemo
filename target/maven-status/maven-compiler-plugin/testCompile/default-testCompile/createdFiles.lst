@@ -1,0 +1,9 @@
+bdd\testcases\SearchResultPageTest.class
+StepDefinations\SearchSteps.class
+bdd\testcases\HomePageTest.class
+bdd\testcases\AccountCreationPageTest.class
+bdd\testcases\IndexPageTest.class
+StepDefinations\LoginSteps.class
+bdd\testcases\LoginPageTest.class
+bdd\testcases\AddToCartPageTest.class
+StepDefinations\select_Product_Steps.class

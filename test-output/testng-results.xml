@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-20T23:44:54 IST" name="Default suite" finished-at="2024-03-20T23:45:17 IST" duration-ms="22732">
+    <groups>
+    </groups>
+    <test started-at="2024-03-20T23:44:54 IST" name="Default test" finished-at="2024-03-20T23:45:17 IST" duration-ms="22732">
+      <class name="bdd.testcases.ScreenshotTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:bdd.testcases.ScreenshotTest@689604d9]" started-at="2024-03-20T23:44:54 IST" name="setUp" finished-at="2024-03-20T23:45:02 IST" duration-ms="7673" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="takeScreenShot()[pri:0, instance:bdd.testcases.ScreenshotTest@689604d9]" started-at="2024-03-20T23:45:02 IST" name="takeScreenShot" finished-at="2024-03-20T23:45:16 IST" duration-ms="14782" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+        <test-method is-config="true" signature="teaDownIndex()[pri:0, instance:bdd.testcases.ScreenshotTest@689604d9]" started-at="2024-03-20T23:45:16 IST" name="teaDownIndex" finished-at="2024-03-20T23:45:17 IST" duration-ms="169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teaDownIndex -->
+      </class> <!-- bdd.testcases.ScreenshotTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

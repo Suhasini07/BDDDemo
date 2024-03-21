@@ -1,0 +1,9 @@
+bdd\pages\AccountCreationPage.class
+bdd\pages\OrderPage.class
+bdd\pages\SearchResultPage.class
+bdd\pages\LoginPage.class
+bdd\baseclass\BaseClass.class
+bdd\actiondriver\Action.class
+bdd\pages\HomePage.class
+bdd\pages\AddToCartPage.class
+bdd\pages\IndexPage.class

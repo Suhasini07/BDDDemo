@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="5" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="bdd.testcases.HomePageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="veriFyOrderHistory"/>
+          <include name="veriFyWishListTest"/>
+          <include name="teaDownIndex"/>
+        </methods>
+      </class> <!-- bdd.testcases.HomePageTest -->
+      <class name="bdd.testcases.IndexPageTest">
+        <methods>
+          <include name="verifyLogo"/>
+          <include name="setUp"/>
+          <include name="teaDownIndex"/>
+        </methods>
+      </class> <!-- bdd.testcases.IndexPageTest -->
+      <class name="bdd.testcases.AddToCartPageTest">
+        <methods>
+          <include name="addToCartTest"/>
+          <include name="setUp"/>
+          <include name="teaDownIndex"/>
+        </methods>
+      </class> <!-- bdd.testcases.AddToCartPageTest -->
+      <class name="bdd.testcases.LoginPageTest">
+        <methods>
+          <include name="teaDownIndex"/>
+          <include name="loginTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- bdd.testcases.LoginPageTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->
