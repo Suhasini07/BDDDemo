@@ -1,7 +1,6 @@
 package bdd.utility;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -9,10 +8,10 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
 
-public class ReadExelFile {
-	//@Test
+import bdd.baseclass.BaseClass;
+
+public class ReadExelFile extends BaseClass {
 	@DataProvider(name="pincode_data")
 	public String[][] pincodeData() throws IOException {
 		// code to read excel file using Apache POI		

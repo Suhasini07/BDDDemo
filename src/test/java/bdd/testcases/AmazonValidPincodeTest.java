@@ -4,18 +4,16 @@ This page will check which pin codes are valid for Amazon delivery
  */
 package bdd.testcases;
 
-import org.checkerframework.framework.qual.DefaultQualifier.List;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import java.util.Set;
+
+import org.apache.log4j.Logger;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import bdd.baseclass.BaseClass;
-import bdd.pages.HomePage;
+import bdd.pages.AmazonValidPincodePage;
 import bdd.pages.IndexPage;
-import bdd.pages.LoginPage;
+import bdd.pages.ProductDetailPage;
 import bdd.pages.SearchResultPage;
 import bdd.utility.ReadExelFile;
 import listeners.AmazonListener;
@@ -28,35 +26,22 @@ public class AmazonValidPincodeTest extends BaseClass{
 	
 	IndexPage indexPage;
 	SearchResultPage searchResultPage;
+	ProductDetailPage productDetailPage;
+	AmazonValidPincodePage amazonValidPincodePage =new AmazonValidPincodePage();
+	Logger LOG=Logger.getLogger(AmazonValidPincodeTest.class);
 	
-	@FindBy(css="#contextualIngressPtLabel_deliveryShortLine > span:nth-child(1)")
-	WebElement deliverTo;
-	
-	@FindBy(css="#GLUXZipUpdateInput")
-	WebElement EnterPincodeField;
-	
-	@FindBy(css="#GLUXZipUpdate > span > input")
-	WebElement applyButton;
-	
-	@BeforeMethod
-	public void setUp()
-	{
-		launchApp();
-	}
-	
-	@AfterMethod
-	public void teaDownIndex()
-	{
-		tearDown();
-	}
-	
+		
 	@Test(dataProvider ="pincode_data",dataProviderClass = ReadExelFile.class )
 	
-	public void checkValidPincodes(String pincode) {
+	public void checkValidPincodes(String pinCode) {
 		indexPage=new IndexPage();
-		searchResultPage=indexPage.searchProduct("samsung mobile");
-		deliverTo.click();
-		
+		searchResultPage=indexPage.searchProduct(prop.getProperty("search"));
+		productDetailPage=searchResultPage.clickOnProduct1();
+
+		amazonValidPincodePage.switchWindow();;
+		amazonValidPincodePage.enterPincode(pinCode);		
+		LOG.info("Running test for checking valid pincodes");
+
 	}
 
 }

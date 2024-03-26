@@ -8,39 +8,29 @@ import java.io.File;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.io.FileHandler;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.internal.Utils;
+
+import bdd.baseclass.BaseClass;
 
 /**
  * @author Suhasini Shinde
  */
-public class AmazonListener implements ITestListener {
+public class AmazonListener extends BaseClass implements ITestListener {
 	
+	//Logger LOG=Logger.getLogger(AmazonListener.class);
 	@Override
 	public void onTestFailure(ITestResult result) {
 		// Logic to take screen shot on test case failure.
 		String testCaseName=result.getName();
+		//LOG.info(testCaseName + " failed");
 		
-		System.out.println(testCaseName  +" failed");
-		
-		WebDriver driver = null;
-		
-	try {
-		driver=(WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
-	} catch (IllegalArgumentException | IllegalAccessException | NoSuchFieldException | SecurityException e) {
-		// TODO Auto-generated catch block
-			e.printStackTrace();
-	}
 	File screenShotFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		//File destFilePath=System.getProperty("user.dir")+"\\Screenshots\\ " +testCaseName + "jpg" ;
 		try {
-			FileUtils.copyFile(screenShotFile, new File(System.getProperty("user.dir") + "\\Screenshots\\abc.jpg"));
-			//FileHandler.copy(screenShotFile, new File(System.getProperty("user.dir") + "\\Screenshots"));
+			FileUtils.copyFile(screenShotFile, new File(System.getProperty("user.dir") + "\\Screenshots\\"+testCaseName+".jpg"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

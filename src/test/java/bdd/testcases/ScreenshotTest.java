@@ -3,9 +3,8 @@
  */
 package bdd.testcases;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -24,21 +23,11 @@ public class ScreenshotTest extends BaseClass{
 	IndexPage indexPage;
 	LoginPage loginPage;
 	HomePage homePage;
-	
-	@BeforeMethod
-	public void setUp()
-	{
-		launchApp();
-	}
-	
-	@AfterMethod
-	public void teaDownIndex()
-	{
-		tearDown();
-	}
+	Logger LOG=Logger.getLogger(ScreenshotTest.class);
 	
 	@Test
-	public void takeScreenShot() {
+	public void checkScreenShot() {
+		LOG.info("This test case is checking whether screenshot gets captured after test case getting fail");
 		
 		indexPage= new IndexPage();
 		loginPage=indexPage.clickOnSignIn();
@@ -46,7 +35,7 @@ public class ScreenshotTest extends BaseClass{
 		homePage=loginPage.login();
 		
 		
-		String actual="https://www.amazon.in/?ref_=nav_ya_signin";
+		String actual="https://www.amazon.in/?ref_=nav_ya_signin123";
 		Assert.assertEquals(actual,driver.getCurrentUrl());
 
 	}

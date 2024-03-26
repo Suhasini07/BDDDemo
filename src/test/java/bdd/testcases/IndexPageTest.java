@@ -1,13 +1,13 @@
 package bdd.testcases;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import bdd.baseclass.BaseClass;
 import bdd.pages.IndexPage;
+import bdd.pages.SearchResultPage;
 import listeners.AmazonListener;
 
 /**
@@ -17,24 +17,12 @@ import listeners.AmazonListener;
 
 
 @Listeners(AmazonListener.class)
-class IndexPageTest extends BaseClass {
+public class IndexPageTest extends BaseClass {
 	
-	IndexPage indexPage=new IndexPage();
-
+	IndexPage indexPage;
+	SearchResultPage searchResultPage;
+    Logger LOG=Logger.getLogger(IndexPageTest.class);
 	
-	@BeforeMethod
-	public void setUp()
-	{
-		launchApp();
-	}
-	
-	@AfterMethod
-	public void teaDownIndex()
-	{
-		tearDown();
-	}
-	
-	org.apache.log4j.Logger LOG=org.apache.log4j.LogManager.getLogger(IndexPageTest.class);
 	
 	
 	@Test
@@ -53,7 +41,18 @@ class IndexPageTest extends BaseClass {
 	{
 		String amazonTitle=indexPage.getAmazonTitle();
 		Assert.assertEquals(amazonTitle, "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in");
-		LOG.info("Title of Amazon title");
+		LOG.info("Running test to check Title of Amazon title");
+	}
+	
+	@Test
+	
+	public void navigatingToSearchResultPage() {
+		indexPage=new IndexPage();
+		searchResultPage=indexPage.searchProduct(prop.getProperty("search"));
+		//return searchResultPage;
+		String title=driver.getTitle();
+		System.out.println("Title of navigated page is : " + title);
+		Assert.assertEquals(title, "Amazon.in : samsung mobile");
 	}
 
 }

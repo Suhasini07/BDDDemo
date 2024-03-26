@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import bdd.actiondriver.Action;
 import bdd.baseclass.BaseClass;
 
 public class IndexPage extends BaseClass {
@@ -11,7 +12,7 @@ public class IndexPage extends BaseClass {
 	@FindBy(css="span#nav-link-accountList-nav-line-1")
 	WebElement signInBtn;
 	
-	@FindBy(css="a#nav-logo-sprites")
+	@FindBy(css="#nav-logo-sprites")
 	WebElement amazonLogo;
 	
 	@FindBy(css="input#twotabsearchtextbox")
@@ -27,7 +28,7 @@ public class IndexPage extends BaseClass {
 	
 	public LoginPage clickOnSignIn()
 	{
-		signInBtn.click();
+		Action.click(driver, signInBtn);
 		return new LoginPage();
 	}
 	
@@ -46,7 +47,7 @@ public class IndexPage extends BaseClass {
 	public SearchResultPage searchProduct(String product)
 	{
 		searchBox.sendKeys(product);
-		searchBtn.click();
+		Action.click(driver, searchBtn);
 		
 		return new SearchResultPage();
 	}

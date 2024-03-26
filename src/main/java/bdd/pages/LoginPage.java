@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import bdd.actiondriver.Action;
 import bdd.baseclass.BaseClass;
 
 public class LoginPage extends BaseClass {
@@ -38,7 +39,7 @@ public class LoginPage extends BaseClass {
 	}
 	
 	public AccountCreationPage clickOnAccountCreateLink() {
-		accountCreateLink.click();
+		Action.click(driver, accountCreateLink);
 		return new AccountCreationPage();
 
 	}
@@ -47,10 +48,10 @@ public class LoginPage extends BaseClass {
 	public HomePage login()
 	{
 		mobileNo.sendKeys(prop.getProperty("mobile"));
-		continueButton.click();
+		Action.click(driver, continueButton);
 		
 		password.sendKeys(prop.getProperty("password"));
-		signInButton.click();
+		Action.click(driver, signInButton);
 		
 		return new HomePage();
 	}

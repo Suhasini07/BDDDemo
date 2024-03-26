@@ -3,9 +3,9 @@
  */
 package bdd.testcases;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -24,21 +24,11 @@ public class HomePageTest extends BaseClass {
 	HomePage homePage;
 	IndexPage indexPage;
 	LoginPage loginPage;
-	
-	@BeforeMethod
-	public void setUp()
-	{
-		launchApp();
-	}
-	
-	@AfterMethod
-	public void teaDownIndex()
-	{
-		tearDown();
-	}
+	Logger LOG=Logger.getLogger(HomePageTest.class);
 	
 	@Test
 	public void veriFyWishListTest() {
+		LOG.info("Running test to verify wishlist");
 		
 		indexPage=new IndexPage();
 		loginPage=indexPage.clickOnSignIn();
@@ -50,6 +40,7 @@ public class HomePageTest extends BaseClass {
 	
 	@Test
 	public void veriFyOrderHistory() {
+		LOG.info("Running test to check order history");
 		indexPage=new IndexPage();
 		loginPage=indexPage.clickOnSignIn();
 		homePage=loginPage.login();

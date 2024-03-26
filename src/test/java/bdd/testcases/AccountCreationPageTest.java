@@ -3,9 +3,8 @@
  */
 package bdd.testcases;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -24,22 +23,12 @@ public class AccountCreationPageTest  extends BaseClass{
 	AccountCreationPage accountCreationPage;
 	IndexPage indexPage;
 	LoginPage loginPage;
+	Logger LOG=Logger.getLogger(AccountCreationPageTest.class);
 	
-	@BeforeMethod
-	public void setUp()
-	{
-		launchApp();
-	}
-	
-	@AfterMethod
-	public void teaDownIndex()
-	{
-		tearDown();
-	}
 	
 	@Test
 public void verifyCreateAccountPageTest() {
-		
+		LOG.info("Running verifying Account creation page test ");
 		indexPage=new IndexPage();
 		loginPage=indexPage.clickOnSignIn();
 		accountCreationPage=loginPage.clickOnAccountCreateLink();

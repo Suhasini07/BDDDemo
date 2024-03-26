@@ -13,13 +13,7 @@ public class LoginSteps {
 	
 	public static WebDriver driver=null;
 	
-	@Given("Browser is launched")
-public void browser_is_launched()
-	{
-		driver=new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-    }
+	
 
 @And("user is on login page")
 public void user_is_on_login_page()
@@ -62,12 +56,6 @@ public void user_logged_in_successfully()
 	System.out.println(msg);
 	
    }
-
-@Then("user gets logged out")
-public void user_gets_logged_out() {
-	
-	driver.close();
-  }
 
 
 	

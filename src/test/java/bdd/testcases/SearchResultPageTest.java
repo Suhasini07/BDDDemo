@@ -3,11 +3,8 @@
  */
 package bdd.testcases;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -26,24 +23,13 @@ public class SearchResultPageTest extends BaseClass {
 	IndexPage indexPage;
 	SearchResultPage serachResultPage;
 	ProductDetailPage productDetailPage;
-	
-	
-	@BeforeMethod
-	public void setUp()
-	{
-		launchApp();
-	}
-	
-	@AfterMethod
-	public void teaDownIndex()
-	{
-		tearDown();
-	}
+	Logger LOG=Logger.getLogger(SearchResultPageTest.class);
 	
 	@Test
 	public void productSearchTest() {
+		LOG.info("This test checks whether product is available or not");
 		indexPage=new IndexPage();
-		serachResultPage=indexPage.searchProduct("samsung mobile");
+		serachResultPage=indexPage.searchProduct(prop.getProperty("search"));
 		boolean result=serachResultPage.isProductAvailable();
 		Assert.assertTrue(result);
 		

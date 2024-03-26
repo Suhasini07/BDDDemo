@@ -4,6 +4,7 @@
  */
 package utilityTestCases;
 
+import org.apache.log4j.Logger;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -17,12 +18,12 @@ import listeners.AmazonListener;
 @Listeners(AmazonListener.class)
 public class ExcelTest {
 	
+	Logger LOG=Logger.getLogger(ExcelTest.class);
+	
 	@Test(dataProvider = "pincode_data",dataProviderClass = ReadExelFile.class)
 	
 	public void verifyErrorMessageIsAbsentForValidPincodes(String pincode) {
-		
-		System.out.println(pincode);
-
+		LOG.info(pincode);
 	}
 
 }

@@ -1,9 +1,16 @@
+bdd\testcases\ScreenshotTest.class
 bdd\testcases\SearchResultPageTest.class
 StepDefinations\SearchSteps.class
+StepDefinations\Hooks.class
+bdd\testcases\AmazonValidPincodeTest.class
+StepDefinations\IndexPageSteps.class
+bdd\testcases\ProductDetailPageTest.class
+utilityTestCases\ExcelTest.class
 bdd\testcases\HomePageTest.class
 bdd\testcases\AccountCreationPageTest.class
 bdd\testcases\IndexPageTest.class
 StepDefinations\LoginSteps.class
+listeners\AmazonListener.class
 bdd\testcases\LoginPageTest.class
 bdd\testcases\AddToCartPageTest.class
 StepDefinations\select_Product_Steps.class
