@@ -1,6 +1,7 @@
 bdd\testcases\SearchResultPageTest.class
 StepDefinations\SearchSteps.class
 StepDefinations\Hooks.class
+listeners\AllureReportListener.class
 bdd\testcases\ProductDetailPageTest.class
 bdd\testcases\HighestAndLowestPriceTest.class
 bdd\testcases\AccountCreationPageTest.class

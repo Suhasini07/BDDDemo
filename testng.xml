@@ -17,5 +17,5 @@
       <class name="bdd.testcases.ScreenshotTest"/>
       <class name="bdd.baseclass.MyRunner"></class>
     </classes>
-  </test> <!-- Test -->
+      </test> <!-- Test -->
 </suite> <!-- Suite -->
