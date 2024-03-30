@@ -1,6 +1,2 @@
-2024-Mar-29 23:30:01,446 [main] bdd.testcases.ScreenshotTest 
-  INFO  This test case is checking whether screenshot gets captured after test case getting fail
-2024-Mar-29 23:30:04,985 [main] bdd.baseclass.BaseClass 
-  INFO  Launching Chrome browser
-2024-Mar-29 23:30:13,561 [main] bdd.baseclass.BaseClass 
-  INFO  Launching Chrome browser
+2024-Mar-30 13:36:12,182 [main] bdd.baseclass.BaseClassÂ 
+Â Â INFO Â Launching Chrome browser
