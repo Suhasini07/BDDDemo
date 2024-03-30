@@ -1,14 +1,6 @@
-2024-Mar-26 14:44:02,626 [main] bdd.baseclass.BaseClass 
-  INFO  Launching Chrome browser
-2024-Mar-26 14:44:07,316 [main] bdd.testcases.IndexPageTest 
-  INFO  Running test to check Title of Amazon title
-2024-Mar-26 14:44:09,572 [main] bdd.baseclass.BaseClass 
-  INFO  Launching Chrome browser
-2024-Mar-26 14:44:13,903 [main] bdd.testcases.ScreenshotTest 
+2024-Mar-29 23:30:01,446 [main] bdd.testcases.ScreenshotTest 
   INFO  This test case is checking whether screenshot gets captured after test case getting fail
-2024-Mar-26 14:44:22,316 [main] bdd.baseclass.BaseClass 
+2024-Mar-29 23:30:04,985 [main] bdd.baseclass.BaseClass 
   INFO  Launching Chrome browser
-2024-Mar-26 14:44:29,535 [main] bdd.baseclass.BaseClass 
-  INFO  Launching Chrome browser
-2024-Mar-26 14:44:49,240 [main] bdd.baseclass.BaseClass 
+2024-Mar-29 23:30:13,561 [main] bdd.baseclass.BaseClass 
   INFO  Launching Chrome browser

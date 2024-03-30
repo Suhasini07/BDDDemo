@@ -10,55 +10,36 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class LoginSteps {
-	
-	public static WebDriver driver=null;
-	
-	
 
-@And("user is on login page")
-public void user_is_on_login_page()
-{
-	driver.get("https://www.amazon.in/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.in%2F%3Fref_%3Dnav_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0");
-	
-   }
+	public static WebDriver driver = null;
 
-@When("user enter valid username and invalid password")
-public void user_enter_valid_username_and_invalid_password()
-{
-	driver.findElement(By.cssSelector("input#ap_email")).sendKeys("suhasinishinde49@gmail.com");
-	driver.findElement(By.cssSelector("input.a-button-input")).click();
-	driver.findElement(By.cssSelector("input#ap_password")).sendKeys("hfghghfg");
-    }
+	@And("user is on login page")
+	public void user_is_on_login_page() {
+		driver.get(
+				"https://www.amazon.in/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.in%2F%3Fref_%3Dnav_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0");
 
-//@When("user enter valid username and valid password")
-//public void user_enter_valid_username_and_valid_password() {
-//	driver.findElement(By.cssSelector("input#ap_email")).sendKeys("suhasinishinde49@gmail.com");
-//	driver.findElement(By.cssSelector("input.a-button-input")).click();
-//driver.findElement(By.cssSelector("input#ap_password")).sendKeys("Hanuman@30");
-//
-//	
-//    }
+	}
 
+	@When("user enter valid username and invalid password")
+	public void user_enter_valid_username_and_invalid_password() {
+		driver.findElement(By.cssSelector("input#ap_email")).sendKeys("suhasinishinde49@gmail.com");
+		driver.findElement(By.cssSelector("input.a-button-input")).click();
+		driver.findElement(By.cssSelector("input#ap_password")).sendKeys("Hanuman79");
+	}
 
-@And("user clicks on login button")
-public void user_clicks_on_login_button() {
-	driver.findElement(By.cssSelector("input#signInSubmit")).click();
-    }
+	@And("user clicks on login button")
+	public void user_clicks_on_login_button() {
+		driver.findElement(By.cssSelector("input#signInSubmit")).click();
+	}
 
+	@Then("user logged in successfully")
+	public void user_logged_in_successfully()
 
-@Then("user logged in successfully")
-public void user_logged_in_successfully()
+	{
+		String msg = driver.findElement(By.cssSelector("span.a-list-item")).getText();
 
+		System.out.println(msg);
 
-{
-	String msg=driver.findElement(By.cssSelector("span.a-list-item")).getText();
-	
-	System.out.println(msg);
-	
-   }
-
-
-	
-	
+	}
 
 }

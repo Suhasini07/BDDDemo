@@ -1,5 +1,7 @@
 bdd\baseclass\MyRunner.class
 bdd\pages\AccountCreationPage.class
+bdd\pages\LocalizationPage.class
+bdd\pages\HighLowPricePage.class
 bdd\pages\LoginPage.class
 bdd\baseclass\BaseClass.class
 bdd\actiondriver\Action.class
@@ -8,7 +10,6 @@ bdd\pages\ProductDetailPage.class
 bdd\pages\HomePage.class
 bdd\pages\AddToCartPage.class
 bdd\pages\CheckoutPage.class
-bdd\pages\OrderPage.class
 bdd\pages\SearchResultPage.class
 bdd\pages\AmazonValidPincodePage.class
 bdd\pages\AddressSelectPage.class

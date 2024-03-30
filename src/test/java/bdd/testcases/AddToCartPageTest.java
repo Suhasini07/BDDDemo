@@ -35,28 +35,25 @@ public class AddToCartPageTest extends BaseClass {
 	@Test
 	public void addToCartTest() {
 		LOG.info("Running add to cart test");
-		searchResultPage=new SearchResultPage();
+		searchResultPage = new SearchResultPage();
 
 		indexPage = new IndexPage();
-		loginPage=indexPage.clickOnSignIn();
-		homePage=loginPage.login();
-	
-		addToCartPage=new AddToCartPage();
-		productDetailPage=new ProductDetailPage();
-		loginPage=indexPage.clickOnSignIn();
-		homePage=loginPage.login();
-	
+		loginPage = indexPage.clickOnSignIn();
+		homePage = loginPage.login();
+
+		addToCartPage = new AddToCartPage();
+		productDetailPage = new ProductDetailPage();
+		loginPage = indexPage.clickOnSignIn();
+		homePage = loginPage.login();
+
 		System.out.println("Hello 1");
 		searchResultPage = indexPage.searchProduct("samsung mobile");
-		
+
 		productDetailPage = searchResultPage.clickOnProduct1();
 		System.out.println("Hello 2");
-		// addToCartPage.selectQuantity("1");
-		addToCartPage.clickOnAddToCart();
-		System.out.println("Hello 3");
 		boolean result = addToCartPage.validateAddToCartMessage();
-		System.out.println("Hello 4");
 		Assert.assertTrue(result);
+		System.out.println("Hello 3");
 
 	}
 
