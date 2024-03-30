@@ -28,19 +28,13 @@ public class HighLowPricePage extends BaseClass {
 	}
 
 	public void getPriceOfItem() {
-		Map<WebElement, Integer> map = new HashMap<WebElement, Integer>();
+		//Map<WebElement, Integer> map = new HashMap<WebElement, Integer>();
 
 		for (int i = 0; i < Price.size(); i++) {
 			if (Price.get(i).getText() != "") {
-				map.put(Price.get(i), Integer.parseInt(Price.get(i).getText().replaceAll(",", "")));
+				System.out.println(Price.get(i).getText().replaceAll(",", ""));
 			}
 		}
-		List<Entry<WebElement, Integer>> le = new ArrayList<Map.Entry<WebElement, Integer>>(map.entrySet());
-
-		for (Entry e : le) {
-			System.out.println(e.getValue());
-
-		}
-	}
+			}
 
 }
