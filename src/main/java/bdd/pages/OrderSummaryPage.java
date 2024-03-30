@@ -10,7 +10,5 @@ import bdd.baseclass.BaseClass;
  * 
  */
 public class OrderSummaryPage extends BaseClass {
-	
-	
 
 }

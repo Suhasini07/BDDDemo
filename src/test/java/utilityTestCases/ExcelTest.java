@@ -17,11 +17,11 @@ import listeners.AmazonListener;
  */
 @Listeners(AmazonListener.class)
 public class ExcelTest {
-	
-	Logger LOG=Logger.getLogger(ExcelTest.class);
-	
-	@Test(dataProvider = "pincode_data",dataProviderClass = ReadExelFile.class)
-	
+
+	Logger LOG = Logger.getLogger(ExcelTest.class);
+
+	@Test(dataProvider = "pincode_data", dataProviderClass = ReadExelFile.class)
+
 	public void verifyErrorMessageIsAbsentForValidPincodes(String pincode) {
 		LOG.info(pincode);
 	}

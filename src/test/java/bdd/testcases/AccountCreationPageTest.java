@@ -18,26 +18,22 @@ import listeners.AmazonListener;
  * @author Suhasini Shinde.
  */
 @Listeners(AmazonListener.class)
-public class AccountCreationPageTest  extends BaseClass{
-	
+public class AccountCreationPageTest extends BaseClass {
+
 	AccountCreationPage accountCreationPage;
 	IndexPage indexPage;
 	LoginPage loginPage;
-	Logger LOG=Logger.getLogger(AccountCreationPageTest.class);
-	
-	
-	@Test
-public void verifyCreateAccountPageTest() {
-		LOG.info("Running verifying Account creation page test ");
-		indexPage=new IndexPage();
-		loginPage=indexPage.clickOnSignIn();
-		accountCreationPage=loginPage.clickOnAccountCreateLink();
-		boolean formTitle=accountCreationPage.valiteFormTitle();
-		Assert.assertTrue(formTitle);
-		
+	Logger LOG = Logger.getLogger(AccountCreationPageTest.class);
 
-}
-	
-	
+	@Test
+	public void verifyCreateAccountPageTest() {
+		LOG.info("Running verifying Account creation page test ");
+		indexPage = new IndexPage();
+		loginPage = indexPage.clickOnSignIn();
+		accountCreationPage = loginPage.clickOnAccountCreateLink();
+		boolean formTitle = accountCreationPage.valiteFormTitle();
+		Assert.assertTrue(formTitle);
+
+	}
 
 }

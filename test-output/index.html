@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\a\AppData\Local\Temp\testng-eclipse--1513733475\testng-customsuite.xml</span>
+                    <span>C:\Users\a\AppData\Local\Temp\testng-eclipse-1577724284\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,17 +103,17 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="bdd.baseclass.MyRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify error message when user enters invalid username or password&quot;, &quot;Test login functionality&quot;)">runScenario("Verify error message when user enters invalid username or password", "Test login functionality")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="bdd.baseclass.MyRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Select particular product from search result.&quot;, &quot;Test select product page is working or not&quot;)">runScenario("Select particular product from search result.", "Test select product page is working or not")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="bdd.baseclass.MyRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify item gets searched or not&quot;, &quot;Feature to test search functionality&quot;)">runScenario("Verify item gets searched or not", "Feature to test search functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="bdd.baseclass.MyRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify error message when user enters invalid username or password&quot;, &quot;Test login functionality&quot;)">runScenario("Verify error message when user enters invalid username or password", "Test login functionality")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -153,6 +153,80 @@
               <span class="class-name">bdd.baseclass.MyRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Select particular product from search result.&quot;, &quot;Test select product page is working or not&quot;)">
+                  </a> <!-- runScenario("Select particular product from search result.", "Test select product page is working or not") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Select particular product from search result.","Test select product page is working or not")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d961973737402191f19da87582b5ff63, actions {actions=[org.openqa.selenium.interactions.Sequence@313f8301]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.60, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\a\AppData\Local\Te...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65031}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65031/devtoo..., se:cdpVersion: 123.0.6312.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d961973737402191f19da87582b5ff63
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:609)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:598)
+	at bdd.actiondriver.Action.click(Action.java:45)
+	at bdd.pages.IndexPage.searchProduct(IndexPage.java:44)
+	at StepDefinations.select_Product_Steps.user_clicks_on_particular_product(select_Product_Steps.java:18)
+	at ✽.user clicks on particular product(file:///C:/Users/a/eclipse-workspace/BDDDemo/src/test/resources/Feature/select_Product.feature:4)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify item gets searched or not&quot;, &quot;Feature to test search functionality&quot;)">
+                  </a> <!-- runScenario("Verify item gets searched or not", "Feature to test search functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify item gets searched or not","Feature to test search functionality")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d961973737402191f19da87582b5ff63, actions {actions=[org.openqa.selenium.interactions.Sequence@7d3c09ec]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.60, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\a\AppData\Local\Te...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65031}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65031/devtoo..., se:cdpVersion: 123.0.6312.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d961973737402191f19da87582b5ff63
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:609)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:598)
+	at bdd.actiondriver.Action.click(Action.java:45)
+	at bdd.pages.IndexPage.searchProduct(IndexPage.java:44)
+	at StepDefinations.SearchSteps.user_enters_text_in_serach_box(SearchSteps.java:20)
+	at ✽.User enters text in serach box(file:///C:/Users/a/eclipse-workspace/BDDDemo/src/test/resources/Feature/search.feature:4)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="runScenario(&quot;Verify error message when user enters invalid username or password&quot;, &quot;Test login functionality&quot;)">
@@ -215,78 +289,6 @@ public void user_gets_logged_out() {
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Select particular product from search result.&quot;, &quot;Test select product page is working or not&quot;)">
-                  </a> <!-- runScenario("Select particular product from search result.", "Test select product page is working or not") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Select particular product from search result.","Test select product page is working or not")</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48b3e01b74c112d7d6c9391723650e87, executeScript {script=arguments[0].scrollIntoView(), args=[{element-6066-11e4-a52e-4f735466cecf=f.F87917306598BDA65E3F80528EC097B6.d.EA5520447CC58C9247E1F66F946EE460.e.267}]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.58, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: C:\Users\a\AppData\Local\Te...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51112}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51112/devtoo..., se:cdpVersion: 123.0.6312.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48b3e01b74c112d7d6c9391723650e87
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:468)
-	at bdd.actiondriver.Action.scrollPage(Action.java:47)
-	at bdd.pages.SearchResultPage.clickOnProduct1(SearchResultPage.java:41)
-	at StepDefinations.select_Product_Steps.user_clicks_on_particular_product(select_Product_Steps.java:19)
-	at ✽.user clicks on particular product(file:///C:/Users/a/eclipse-workspace/BDDDemo/src/test/resources/Feature/select_Product.feature:4)
-
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Verify item gets searched or not&quot;, &quot;Feature to test search functionality&quot;)">
-                  </a> <!-- runScenario("Verify item gets searched or not", "Feature to test search functionality") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verify item gets searched or not","Feature to test search functionality")</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48b3e01b74c112d7d6c9391723650e87, executeScript {script=arguments[0].scrollIntoView(), args=[{element-6066-11e4-a52e-4f735466cecf=f.43B5FEC51436B3191476A27BD5DDEE3F.d.800D7311213D174BD182CE5FFAB43A31.e.225}]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.58, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: C:\Users\a\AppData\Local\Te...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51112}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51112/devtoo..., se:cdpVersion: 123.0.6312.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48b3e01b74c112d7d6c9391723650e87
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:468)
-	at bdd.actiondriver.Action.scrollPage(Action.java:47)
-	at bdd.pages.SearchResultPage.clickOnProduct1(SearchResultPage.java:41)
-	at StepDefinations.SearchSteps.user_is_navigated_to_related_search_results(SearchSteps.java:32)
-	at ✽.user is navigated to related search results.(file:///C:/Users/a/eclipse-workspace/BDDDemo/src/test/resources/Feature/search.feature:5)
-
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
@@ -320,7 +322,7 @@ Session ID: 48b3e01b74c112d7d6c9391723650e87
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\a\AppData\Local\Temp\testng-eclipse--1513733475\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\a\AppData\Local\Temp\testng-eclipse-1577724284\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -381,28 +383,28 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'bdd.baseclass.MyRunner')
-data.setCell(0, 3, 40085);
+data.setCell(0, 3, 18526);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'bdd.baseclass.MyRunner')
-data.setCell(1, 3, 17667);
+data.setCell(1, 3, 13327);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'bdd.baseclass.MyRunner')
-data.setCell(2, 3, 11030);
+data.setCell(2, 3, 8905);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'runScenario')
 data.setCell(3, 2, 'bdd.baseclass.MyRunner')
-data.setCell(3, 3, 10750);
+data.setCell(3, 3, 7782);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'runScenario')
 data.setCell(4, 2, 'bdd.baseclass.MyRunner')
-data.setCell(4, 3, 4866);
+data.setCell(4, 3, 7500);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 56 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -430,38 +432,38 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">bdd.baseclass.MyRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@2f0ed952)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@17947e6d)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("Verify Amazon Logo is present on Index Page or not.", "Login Index Page Functionality")</span>
-                <span class="method-start">478 ms</span>
+                <span class="method-start">632 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("User is navigated on SearchResult page after searching any product", "Login Index Page Functionalit...)</span>
-                <span class="method-start">40732 ms</span>
+                <span class="method-start">14164 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Verify error message when user enters invalid username or password", "Test login functionality")</span>
-                <span class="method-start">58415 ms</span>
+                <span class="method-start">32706 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Verify item gets searched or not", "Feature to test search functionality")</span>
-                <span class="method-start">63296 ms</span>
+                <span class="method-start">41633 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Select particular product from search result.", "Test select product page is working or not")</span>
-                <span class="method-start">74081 ms</span>
+                <span class="method-start">49441 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">85146 ms</span>
+                <span class="method-start">56983 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -21,59 +21,51 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-
-
 public class BaseClass {
-	
-	public static WebDriver driver=null;
+
+	public static WebDriver driver = null;
 	public static Properties prop;
-	
-	static Logger LOG=Logger.getLogger(BaseClass.class);
-	
-	public BaseClass()
-	{
-		
-	prop=new Properties();
-	try {
-		FileInputStream fis=new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\bdd\\config\\config.properties" );
-		prop.load(fis);
-	} catch (FileNotFoundException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+
+	static Logger LOG = Logger.getLogger(BaseClass.class);
+
+	public BaseClass() {
+
+		prop = new Properties();
+		try {
+			FileInputStream fis = new FileInputStream(
+					System.getProperty("user.dir") + "\\src\\main\\java\\bdd\\config\\config.properties");
+			prop.load(fis);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
-		
-	}
-	
+
 	@BeforeMethod
-	public static void launchApp()
-	{
-		String browserName=prop.getProperty("browser");
-		if(browserName.equalsIgnoreCase("chrome"))
-		{
-			driver=new ChromeDriver();
+	public static void launchApp() {
+		String browserName = prop.getProperty("browser");
+		if (browserName.equalsIgnoreCase("chrome")) {
+			driver = new ChromeDriver();
 			try {
 				LOG.info("Launching Chrome browser");
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}
-		else if(browserName.equalsIgnoreCase("firefox"))
-		{
-			driver=new FirefoxDriver();
+		} else if (browserName.equalsIgnoreCase("firefox")) {
+			driver = new FirefoxDriver();
 			try {
 				LOG.info("Launching Firefox browser");
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}
-		else if(browserName.equalsIgnoreCase("Internet Explorer"))
-		{
-			driver=new InternetExplorerDriver();
+		} else if (browserName.equalsIgnoreCase("Internet Explorer")) {
+			driver = new InternetExplorerDriver();
 			try {
 				LOG.info("Launching Internet Explorer browser");
 			} catch (Exception e) {
@@ -81,21 +73,20 @@ public class BaseClass {
 				e.printStackTrace();
 			}
 		}
-		
-		else
-		{
+
+		else {
 			LOG.info("Invalid browser name");
 		}
-		
+
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.get(prop.getProperty("url"));
-		
+
 	}
-	
+
 	@AfterMethod
-	public static  void tearDown() {
-		
+	public static void tearDown() {
+
 		driver.close();
 
 	}

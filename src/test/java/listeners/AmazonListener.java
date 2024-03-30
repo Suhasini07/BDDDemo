@@ -20,23 +20,22 @@ import bdd.baseclass.BaseClass;
  * @author Suhasini Shinde
  */
 public class AmazonListener extends BaseClass implements ITestListener {
-	
-	//Logger LOG=Logger.getLogger(AmazonListener.class);
+
+	// Logger LOG=Logger.getLogger(AmazonListener.class);
 	@Override
 	public void onTestFailure(ITestResult result) {
 		// Logic to take screen shot on test case failure.
-		String testCaseName=result.getName();
-		//LOG.info(testCaseName + " failed");
-		
-	File screenShotFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		String testCaseName = result.getName();
+		// LOG.info(testCaseName + " failed");
+
+		File screenShotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(screenShotFile, new File(System.getProperty("user.dir") + "\\Screenshots\\"+testCaseName+".jpg"));
+			FileUtils.copyFile(screenShotFile,
+					new File(System.getProperty("user.dir") + "\\Screenshots\\" + testCaseName + ".jpg"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		
+
 	}
 }
