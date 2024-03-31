@@ -34,8 +34,8 @@ public class ScreenshotTest extends BaseClass {
 
 		homePage = loginPage.login();
 
-		String actual = "https://www.amazon.in/?ref_=nav_ya_signin123";
-		Assert.assertEquals(actual, driver.getCurrentUrl());
+		String expected = "https://www.amazon.in/?ref_=nav_ya_signin123";
+		Assert.assertEquals(driver.getCurrentUrl(), expected);
 
 	}
 

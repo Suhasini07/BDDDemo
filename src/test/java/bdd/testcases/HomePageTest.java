@@ -29,13 +29,12 @@ public class HomePageTest extends BaseClass {
 	@Test
 	public void veriFyWishListTest() {
 		LOG.info("Running test to verify wishlist");
-
 		indexPage = new IndexPage();
 		loginPage = indexPage.clickOnSignIn();
 		homePage = loginPage.login();
 		boolean wish = homePage.validateWishList();
 		Assert.assertTrue(wish);
-
+		LOG.info("End of Running test to verify wishlist");
 	}
 
 	@Test
@@ -46,7 +45,7 @@ public class HomePageTest extends BaseClass {
 		homePage = loginPage.login();
 		boolean orders = homePage.validateYourOrders();
 		Assert.assertTrue(orders);
-
+		LOG.info("End of Running test to check order history");
 	}
 
 }

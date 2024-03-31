@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="bdd.testcases.AddToCartPageTest">
+      <class name="bdd.testcases.HomePageTest">
         <methods>
           <include name="tearDown"/>
-          <include name="addToCartTest"/>
+          <include name="veriFyWishListTest"/>
           <include name="launchApp"/>
         </methods>
-      </class> <!-- bdd.testcases.AddToCartPageTest -->
+      </class> <!-- bdd.testcases.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
