@@ -20,24 +20,22 @@ import listeners.AmazonListener;
 @Listeners(AmazonListener.class)
 public class LoginPageTest extends BaseClass {
 
-	LoginPage loginPage;
+	LoginPage loginPage = new LoginPage();
 	IndexPage indexPage;
-	HomePage homePage;
+	HomePage homePage = new HomePage();
 
 	Logger LOG = Logger.getLogger(LoginPageTest.class);
 
 	@Test
 	public void loginTest() {
-
+		LOG.info("Running Loging Page Test");
 		indexPage = new IndexPage();
 		loginPage = indexPage.clickOnSignIn();
-
 		homePage = loginPage.login();
 		String url = homePage.getHomePageURL();
 		String expectedURL = "https://www.amazon.in/?ref_=nav_signin";
 		Assert.assertEquals(url, expectedURL);
-		LOG.info("Running Loging Page Test");
-
+        LOG.info("End of Login Test");
 	}
 
 }

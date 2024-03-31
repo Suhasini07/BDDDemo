@@ -34,7 +34,7 @@ public class ProductDetailPageTest extends BaseClass {
 		searchResultPage = indexPage.searchProduct(prop.getProperty("search"));
 		productDetailPage = searchResultPage.clickOnProduct1();
 		productDetailPage.validateAboutThisItem();
-		;
+		
 
 	}
 

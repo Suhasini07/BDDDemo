@@ -34,13 +34,12 @@ public class AmazonValidPincodeTest extends BaseClass {
 	@Test(dataProvider = "pincode_data", dataProviderClass = ReadExelFile.class)
 
 	public void checkValidPincodes(String pinCode) {
+		LOG.info("Running test for checking valid pincodes");
 		indexPage = new IndexPage();
 		searchResultPage = indexPage.searchProduct(prop.getProperty("search"));
-
 		productDetailPage = searchResultPage.clickOnProduct1();
-
 		amazonValidPincodePage.enterPincode(pinCode);
-		LOG.info("Running test for checking valid pincodes");
+		LOG.info("End of checkValidPincodes");
 
 	}
 

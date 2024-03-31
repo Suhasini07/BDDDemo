@@ -40,7 +40,7 @@ public class SearchResultPageTest extends BaseClass {
 		indexPage = new IndexPage();
 		serachResultPage = indexPage.searchProduct(prop.getProperty("search"));
 		serachResultPage.clickOnProduct1();
-		Assert.assertEquals(URL, URL);
+		Assert.assertEquals(driver.getCurrentUrl(), URL);
 
 	}
 

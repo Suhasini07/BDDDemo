@@ -23,31 +23,36 @@ public class IndexPageTest extends BaseClass {
 
 	@Test
 	public void verifyLogo() {
+		LOG.info("Verifying Amazon Logo test");
 		indexPage=new IndexPage();
 		boolean result = indexPage.validateLogo();
-		Assert.assertTrue(true);
-		LOG.info("Verifying Amazon Logo");
+		Assert.assertTrue(result);
+		LOG.info("End of Verifying Amazon Logo Test");
+
 	}
 
 	@Test
 
 	public void veryTitle() {
+		LOG.info("Running test to check Title of Amazon title");
 		indexPage=new IndexPage();
 		String amazonTitle = indexPage.getAmazonTitle();
 		Assert.assertEquals(amazonTitle,
 				"Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in");
-		LOG.info("Running test to check Title of Amazon title");
+		LOG.info("End of Verify Title Test");
 	}
 
 	@Test
 
 	public void navigatingToSearchResultPage() {
+		LOG.info("Verifying Search Result Page functionality");
 		indexPage = new IndexPage();
 		searchResultPage = indexPage.searchProduct(prop.getProperty("search"));
-		// return searchResultPage;
 		String title = driver.getTitle();
 		System.out.println("Title of navigated page is : " + title);
 		Assert.assertEquals(title, "Amazon.in : samsung mobile");
+		LOG.info("End of Verifying Search Result Page functionality");
+
 	}
 
 }

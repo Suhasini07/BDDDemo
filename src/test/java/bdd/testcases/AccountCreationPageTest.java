@@ -20,9 +20,9 @@ import listeners.AmazonListener;
 @Listeners(AmazonListener.class)
 public class AccountCreationPageTest extends BaseClass {
 
-	AccountCreationPage accountCreationPage;
+	AccountCreationPage accountCreationPage = new AccountCreationPage();
 	IndexPage indexPage;
-	LoginPage loginPage;
+	LoginPage loginPage = new LoginPage() ;
 	Logger LOG = Logger.getLogger(AccountCreationPageTest.class);
 
 	@Test
@@ -33,6 +33,7 @@ public class AccountCreationPageTest extends BaseClass {
 		accountCreationPage = loginPage.clickOnAccountCreateLink();
 		boolean formTitle = accountCreationPage.valiteFormTitle();
 		Assert.assertTrue(formTitle);
+		LOG.info("End of VerifyingCreateAccountTest");
 
 	}
 
